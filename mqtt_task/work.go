@@ -26,7 +26,7 @@ func NewWork(manager *Manager) *Work {
 	this.manager = manager
 	//opts:=this.GetDefaultOptions("tls://127.0.0.1:3563")
 	//opts := this.GetDefaultOptions("tcp://127.0.0.1:3563")
-	opts := this.GetDefaultOptions("ws://127.0.0.1:3653")
+	opts := this.GetDefaultOptions("ws://dream.manniux.com:3653")
 	opts.SetConnectionLostHandler(func(client MQTT.Client, err error) {
 		fmt.Println("ConnectionLost", err.Error())
 	})
@@ -38,6 +38,14 @@ func NewWork(manager *Manager) *Work {
 	if err != nil {
 		fmt.Println(err.Error())
 	}
+
+	this.On("GameCenter/BoxStatus",func(client MQTT.Client, msg MQTT.Message){
+		fmt.Println("GameCenter/BoxStatus: ",string(msg.Payload()))
+	})
+	this.On("GameCenter/Message",func(client MQTT.Client, msg MQTT.Message){
+		fmt.Println("GameCenter/Message: ",string(msg.Payload()))
+	})
+
 	return this
 }
 
@@ -54,6 +62,11 @@ type Work struct {
 func (this *Work) Init(t task.Task) {
 	this.QPS = 1 //每一个并发平均每秒请求次数(限流)
 	this.closeSig = false
+	_, err := this.Request("Login@Login001/HD_Login", []byte(`{"userName":"xxxxx", "passWord":"123456"}`))
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
 }
 
 /**
@@ -77,7 +90,7 @@ func (this *Work) RunWorker(t task.Task) {
 	}
 }
 func (this *Work) worker(t task.Task) {
-	msg, err := this.Request("Login/HD_Login", []byte(`{"userName":"xxxxx", "passWord":"123456"}`))
+	msg, err := this.Request("GameCenter@GameCenter001/HD_OpenBox", []byte(`{"index":8}`))
 	if err != nil {
 		fmt.Println(err.Error())
 		return
