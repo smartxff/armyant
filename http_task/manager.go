@@ -14,8 +14,8 @@
 package http_task
 
 import (
-	"github.com/liangdas/armyant/task"
-	"github.com/liangdas/armyant/work"
+	"github.com/smartxff/armyant/task"
+	"github.com/smartxff/armyant/work"
 	"io"
 	"os"
 )

@@ -16,8 +16,8 @@ package mqtt_task
 import (
 	"fmt"
 	MQTT "github.com/eclipse/paho.mqtt.golang"
-	"github.com/liangdas/armyant/task"
-	"github.com/liangdas/armyant/work"
+	"github.com/smartxff/armyant/task"
+	"github.com/smartxff/armyant/work"
 	"time"
 )
 

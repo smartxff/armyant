@@ -15,36 +15,6 @@
 			"revisionTime": "2018-11-02T10:13:09Z"
 		},
 		{
-			"checksumSHA1": "ww0BxflDQFWa910vAMvIPILD4l8=",
-			"path": "github.com/liangdas/armyant/http_task",
-			"revision": "d93b50edcdaee06d2588ddfba6342ae163562abc",
-			"revisionTime": "2018-01-07T13:43:50Z"
-		},
-		{
-			"checksumSHA1": "2JfPjnFazgGlwXc8DsGVs8yr8w0=",
-			"path": "github.com/liangdas/armyant/mqtt_task",
-			"revision": "d93b50edcdaee06d2588ddfba6342ae163562abc",
-			"revisionTime": "2018-01-07T13:43:50Z"
-		},
-		{
-			"checksumSHA1": "b4NJ/aYfiaSfkPqC7c89ZoNzg7U=",
-			"path": "github.com/liangdas/armyant/task",
-			"revision": "d93b50edcdaee06d2588ddfba6342ae163562abc",
-			"revisionTime": "2018-01-07T13:43:50Z"
-		},
-		{
-			"checksumSHA1": "50qbpH+YKLpXSDoL2d4BwdwbRzs=",
-			"path": "github.com/liangdas/armyant/utils",
-			"revision": "d93b50edcdaee06d2588ddfba6342ae163562abc",
-			"revisionTime": "2018-01-07T13:43:50Z"
-		},
-		{
-			"checksumSHA1": "O7WKwqtPvwvd5mifSLC3uwax9F4=",
-			"path": "github.com/liangdas/armyant/work",
-			"revision": "d93b50edcdaee06d2588ddfba6342ae163562abc",
-			"revisionTime": "2018-01-07T13:43:50Z"
-		},
-		{
 			"checksumSHA1": "pCY4YtdNKVBYRbNvODjx8hj0hIs=",
 			"path": "golang.org/x/net/http/httpguts",
 			"revision": "03003ca0c849e57b6ea29a4bab8d3cb6e4d568fe",

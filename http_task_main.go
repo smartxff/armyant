@@ -15,8 +15,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/liangdas/armyant/http_task"
-	"github.com/liangdas/armyant/task"
+	"github.com/smartxff/armyant/http_task"
+	"github.com/smartxff/armyant/task"
 	"os"
 	"os/signal"
 )
